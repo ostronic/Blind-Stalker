@@ -20,7 +20,7 @@ Execute code in Parrot OS using root in pkexec
 
   #:  Warning!!!: Do not implement this in your malware, for Education purpose
 
-  #:              and slf use only.
+  #:              and self use only.
 
 Run the Program as root with pkexec:
   #
