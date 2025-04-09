@@ -15,19 +15,18 @@ import subprocess
 import sys
 import time
 
-vo = random.randint(1,5)
-
+vo = random.randint(1,10)
 if getpass.getuser() != 'root':
     print("You must run this program as root using: sudo /usr/bin/pkexec")
     sys.exit(1)
 else:
     while True:
         try:
-            for _ in range(10):
+            for _ in range(vo):
                 subprocess.run(['/usr/sbin/mate-power-backlight-helper', '--set-brightness', '0'])
-                time.sleep(vo)
-                subprocess.run(['/usr/sbin/mate-power-backlight-helper', '--set-brightness', '200'])
-                time.sleep(vo)
+                time.sleep(_)
+                subprocess.run(['/usr/sbin/mate-power-backlight-helper', '--set-brightness', '80'])
+                time.sleep(_)
         except KeyboardInterrupt:
             break
             sys.exit(7)
