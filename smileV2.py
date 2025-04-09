@@ -31,3 +31,4 @@ else:
             break
             sys.exit(7)
             print('\n :}')
+subprocess.call(['/usr/sbin/mate-power-backlight-helper', '--set-brightness', '500'])
